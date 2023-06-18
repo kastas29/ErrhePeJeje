@@ -20,6 +20,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool PlayerCanMove = true;
 
+    public GameObject RadialMenu;
+
     public enum QuestStates { DONE, DOING, TODO } // THE QUEST IS CURRENTLY DONE, BEING DONE OR NEVER STARTED
     public Dictionary<QuestInfo, QuestStates> QuestProgression; // THIS DICTIONARY STORES A QUEST AND ITS CURRENT STATE
 
@@ -44,17 +46,30 @@ public class PlayerManager : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        Debug.Log("checking movement method. PlayerCanMove: " + PlayerCanMove);
-        PlayerMovement = context.ReadValue<Vector2>();
+        if (PlayerCanMove)
+        {
+            Debug.Log("checking movement method. PlayerCanMove: " + PlayerCanMove);
+            PlayerMovement = context.ReadValue<Vector2>();
+        }
     }
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.canceled)
         {
+            // If the player is in Attack state, means that the attack is not over yet, so do not start another attack until the current fininshes
             if (StateController.Instance.currentState != StateController.Instance.mouseAttackState)
                 StateController.Instance.ChangeState(StateController.Instance.mouseAttackState);
         }
 
+    }
+
+    public void ToggleRadialMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            RadialMenu.SetActive(true);
+
+        if (context.canceled)
+            RadialMenu.SetActive(false);
     }
 
     public void addQuest(QuestInfo quest, QuestStates questState)

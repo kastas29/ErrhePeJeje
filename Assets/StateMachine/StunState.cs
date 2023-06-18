@@ -2,7 +2,8 @@ public class StunState : IState
 {
     public void OnEnter(StateController controller)
     {
-        throw new System.NotImplementedException();
+        // The player is not able to move while this state is active
+        // The player plays an animation of stunned
     }
 
     public void OnExit(StateController controller)

@@ -71,7 +71,7 @@ THINGS TO BE FIXED/DEVELOPED:
  - LOOTING
     - The player might need to use a specific item or ability to unlock it.
         Additionally, the player could find treasure maps or clues that lead them to specific locations
-        where chests are hidden, adding an element of exploration to the game.
+        where chests are hidden, adding an element of exploration to the game. Copy as many quest types as possible from sea of thieves or teso
     - Lootable enemies: One of the simplest ways to incorporate loot into your game is to allow players to collect items from defeated enemies. This can be done by having enemies drop items at random intervals or by having a chance to drop specific items based on their type or difficulty.
     - Chests: Chests can be used to provide players with more valuable loot or rare items that are not found on enemies. These could be placed in specific locations throughout the game world, such as hidden rooms, dungeons, or at the end of boss battles.
     - Interactable objects: Other objects in the game world can also be used as loot sources. For example, players might find valuable resources by mining rocks or chopping down trees, or they might discover hidden treasure by interacting with specific objects in the environment.
@@ -87,5 +87,13 @@ THINGS TO BE FIXED/DEVELOPED:
       more engaging and provide a sense of ownership. You could start with a few simple customization options and add more later.
 
 
+
+
+
+ - EMOTES
+    Hide in a barrel
+    Backflip
+    Frontflip (?)
+    I NEED MORE IDEAS PLEAASE
 
 */
