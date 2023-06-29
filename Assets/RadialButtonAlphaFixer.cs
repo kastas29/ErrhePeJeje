@@ -10,7 +10,7 @@ public class RadialButtonAlphaFixer : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
-        img.alphaHitTestMinimumThreshold = 0.5f;
+        img.alphaHitTestMinimumThreshold = 0.2f;
 
     }
 

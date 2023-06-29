@@ -20,7 +20,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool PlayerCanMove = true;
 
-    public GameObject RadialMenu;
+    public GameObject RadialEmotesMenu;
+    public GameObject RadialToolsMenu;
 
     public enum QuestStates { DONE, DOING, TODO } // THE QUEST IS CURRENTLY DONE, BEING DONE OR NEVER STARTED
     public Dictionary<QuestInfo, QuestStates> QuestProgression; // THIS DICTIONARY STORES A QUEST AND ITS CURRENT STATE
@@ -63,13 +64,21 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    public void ToggleRadialMenu(InputAction.CallbackContext context)
+    public void ToggleEmotesRadialMenu(InputAction.CallbackContext context)
     {
         if (context.performed)
-            RadialMenu.SetActive(true);
+            RadialEmotesMenu.SetActive(true);
 
         if (context.canceled)
-            RadialMenu.SetActive(false);
+            RadialEmotesMenu.SetActive(false);
+    }
+    public void ToggleToolsRadialMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            RadialToolsMenu.SetActive(true);
+
+        if (context.canceled)
+            RadialToolsMenu.SetActive(false);
     }
 
     public void addQuest(QuestInfo quest, QuestStates questState)
@@ -135,23 +144,9 @@ public class PlayerManager : MonoBehaviour
     public int getAttackDmg()
     {
         int attackDmg = 0;
-        if (getCriticalAttack() > UnityEngine.Random.Range(0, 1f))
-        {
-            attackDmg = (int)((characterStats.dmg + Equipment.Instance.getEquipmentDmg() + Equipment.Instance.getEquipmentCriticalDmg()) * 1.25f);
-        }
-        else
-        {
             attackDmg = characterStats.dmg + Equipment.Instance.getEquipmentDmg();
-        }
         print("ATTACK DMG: " + attackDmg);
         return attackDmg;
-    }
-
-    public float getCriticalAttack()
-    {
-        float criticalPercent = (characterStats.criticalPercent + Equipment.Instance.getEquipmentCriticalPercent()) / 100;
-        print("CRITICAL PERCENT: " + criticalPercent);
-        return criticalPercent;
     }
 
     public void levelUp()

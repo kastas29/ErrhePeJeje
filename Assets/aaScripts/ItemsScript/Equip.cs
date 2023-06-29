@@ -5,23 +5,14 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Equip : Item
 {
-    public int level;
-    public int Peso;
     public EquipmentType equipType;
     public float WeaponAttackCooldown;
+    public int Dmg;
+    public int Stamina;
+    public int Mana;
+    public int HP;
+    public int Armor;
 
-    public int hp;
-    public int stamina;
-    public int mana;
-    public int dmg;
-    public int speed;
-    public int criticalDmg;
-    public int criticalPercent;
-    public int criticalResistance;
-    public int armor;
-    public int shield;
-    public int Mind;
-    public int Dexterity;
     public enum EquipmentType
     {
         Helmet, Necklace, Chest, Ring, Pant, Shield, Boot, Weapon, Backpack
@@ -29,13 +20,13 @@ public class Equip : Item
 
     public override void Use()
     {
-        Equipment.Instance.addEquip(this);
+        Equipment.Instance.AddEquip(this);
     }
 
     public override void Remove()
     {
-        // Add to inventory
         // Remove from equipment
+        Equipment.Instance.Unequip(this);
     }
 
 }

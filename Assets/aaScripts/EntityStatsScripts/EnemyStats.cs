@@ -16,7 +16,6 @@ public class EnemyStats : ScriptableObject
     [SerializeField] int speed;
     [SerializeField] int armor;
 
-    [SerializeField] Element element;
     [SerializeField] int criticalPercent;
     [SerializeField] int criticalResistance;
 
@@ -59,11 +58,6 @@ public class EnemyStats : ScriptableObject
     {
         set { armor = value; }
         get { return armor; }
-    }
-    public Element Element
-    {
-        set { element = value; }
-        get { return element; }
     }
     public int CriticalPercent
     {

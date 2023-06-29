@@ -15,24 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
-                    "type": "Button",
-                    "id": "89c58e35-52e8-4d15-a061-6ccaf9807311",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Dodge",
-                    "type": "Button",
-                    "id": "7c5a8f77-ac38-416e-9fc2-88944f5746e6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Sneak",
                     "type": "Button",
                     "id": "41af46c2-0842-4a5a-80f7-a6285551baa5",
@@ -51,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Block",
+                    "type": "Button",
+                    "id": "69845dc9-c4e6-4d2b-a6ab-1274790d78ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "9c575727-1208-4623-975f-4b562085c53b",
@@ -63,15 +54,6 @@
                     "name": "All_Inventory",
                     "type": "Button",
                     "id": "867bd4d3-d018-4001-b28f-8877769ceadd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "HotBar",
-                    "type": "Button",
-                    "id": "7f638c19-0910-4622-b0b1-42cbf08bc359",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -105,9 +87,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ToggleRadialMenu",
+                    "name": "ToggleEmotesRadialMenu",
                     "type": "Button",
                     "id": "f0d01552-8254-4ebe-8ce4-87d2cf40517d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleToolsRadialMenu",
+                    "type": "Button",
+                    "id": "aaf70872-96f8-4b5f-bfdf-121aab99f602",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold",
@@ -326,61 +317,6 @@
                 },
                 {
                     "name": "",
-                    "id": "f73e1a2d-f2e2-4712-8ecd-27a48006ffed",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HotBar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "78dbf492-d8ce-47bb-814a-27080f56d672",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HotBar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "066f28c8-551e-4658-bed0-515fd8956148",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HotBar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "28236838-2c20-4b53-b678-bf23c19cff18",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HotBar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "eb62b87d-c1e3-4fd8-ac0c-c6c7dc198c8d",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HotBar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d703ad8a-787e-4711-a7cf-5f95c998f2c1",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -436,30 +372,8 @@
                 },
                 {
                     "name": "",
-                    "id": "9772ddd5-595b-4935-bb99-4b87b430dc91",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c794a884-93c6-499a-b279-327f4564f722",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dodge",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "baf4c83d-768e-4a72-944e-9f4950660a44",
-                    "path": "",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -470,11 +384,33 @@
                 {
                     "name": "",
                     "id": "26c2a086-084f-4056-8e61-5db0b315ed36",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleEmotesRadialMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9757297d-0cb6-4acd-b3be-4d1a482ffcfd",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ToggleRadialMenu",
+                    "action": "ToggleToolsRadialMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54a5f894-e097-455a-8778-b87dd5fc820e",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

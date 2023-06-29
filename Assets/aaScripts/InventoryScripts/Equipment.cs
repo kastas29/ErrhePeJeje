@@ -30,7 +30,7 @@ public class Equipment : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
 
     // agrega un equipo al equipamiento del personaje
-    public void addEquip(Equip equip)
+    public void AddEquip(Equip equip)
     {
         int slot = (int)equip.equipType;
         if (equipmentContent.CharacterEquipment[slot] != null)
@@ -54,7 +54,7 @@ public class Equipment : MonoBehaviour
     }
 
     // desequipa un equipo del personaje
-    public void desEquip(Equip equip)
+    public void Unequip(Equip equip)
     {
         if (Inventory.Instance.addItem(equip))
         {
@@ -119,7 +119,7 @@ public class Equipment : MonoBehaviour
         {
             if (equipmentContent.CharacterEquipment[i] != null)
             {
-                value += equipmentContent.CharacterEquipment[i].hp;
+                value += equipmentContent.CharacterEquipment[i].HP;
             }
         }
         return value;
@@ -131,7 +131,7 @@ public class Equipment : MonoBehaviour
         {
             if (equipmentContent.CharacterEquipment[i] != null)
             {
-                value += equipmentContent.CharacterEquipment[i].stamina;
+                value += equipmentContent.CharacterEquipment[i].Stamina;
             }
         }
         return value;
@@ -143,7 +143,7 @@ public class Equipment : MonoBehaviour
         {
             if (equipmentContent.CharacterEquipment[i] != null)
             {
-                value += equipmentContent.CharacterEquipment[i].mana;
+                value += equipmentContent.CharacterEquipment[i].Mana;
             }
         }
         return value;
@@ -155,55 +155,7 @@ public class Equipment : MonoBehaviour
         {
             if (equipmentContent.CharacterEquipment[i] != null)
             {
-                value += equipmentContent.CharacterEquipment[i].dmg;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentSpeed()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].speed;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentCriticalDmg()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].criticalDmg;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentCriticalPercent()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].criticalPercent;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentCriticalRes()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].criticalResistance;
+                value += equipmentContent.CharacterEquipment[i].Dmg;
             }
         }
         return value;
@@ -215,46 +167,9 @@ public class Equipment : MonoBehaviour
         {
             if (equipmentContent.CharacterEquipment[i] != null)
             {
-                value += equipmentContent.CharacterEquipment[i].armor;
+                value += equipmentContent.CharacterEquipment[i].Armor;
             }
         }
         return value;
     }
-    public int getEquipmentShield()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].shield;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentMind()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].Mind;
-            }
-        }
-        return value;
-    }
-    public int getEquipmentDexterity()
-    {
-        int value = 0;
-        for (int i = 0; i < equipmentContent.CharacterEquipment.Length; i++)
-        {
-            if (equipmentContent.CharacterEquipment[i] != null)
-            {
-                value += equipmentContent.CharacterEquipment[i].Dexterity;
-            }
-        }
-        return value;
-    }
-    // fin
 }

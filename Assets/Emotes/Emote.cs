@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Emote : ScriptableObject
 {
-    public AnimationClip EmoteAnimationClip;
+    public string EmoteAnimationClipName;
+    public Sprite EmoteSprite;
     public string EmoteName;
 }

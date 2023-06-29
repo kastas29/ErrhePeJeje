@@ -7,6 +7,10 @@ public class EmoteManager : MonoBehaviour
     public List<Emote> availableEmotes = new List<Emote>(); // List of all available emotes
     public Emote[] equippedEmotes = new Emote[8]; // Array to store equipped emotes (size 4)
 
+    // Delegates and events and so on
+    public delegate void EquipEmoteEvent();
+    public event EquipEmoteEvent OnEmoteEquipped;
+
     // Function to equip an emote at a specific index
     public void EquipEmote(int index, Emote emote)
     {
@@ -16,7 +20,11 @@ public class EmoteManager : MonoBehaviour
             return;
         }
 
+        // If the position in the array is already occupied
+        if (equippedEmotes[index] != null) UnequipEmote(index);
         equippedEmotes[index] = emote;
+
+        OnEmoteEquipped();
     }
 
     // Function to unequip an emote at a specific index
@@ -47,5 +55,15 @@ public class EmoteManager : MonoBehaviour
     public bool IsEmoteEquipped(Emote emote)
     {
         return System.Array.IndexOf(equippedEmotes, emote) != -1;
+    }
+
+    // Function to play an emote
+    public void PlayEmote(int index)
+    {
+        if (equippedEmotes[index] != null)
+        {
+            Emote emoteToPlay = equippedEmotes[index];
+            PlayerManager.Instance.GetComponent<Animator>()?.Play(emoteToPlay?.EmoteAnimationClipName);
+        }
     }
 }
