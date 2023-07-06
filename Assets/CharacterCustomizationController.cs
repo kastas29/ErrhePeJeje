@@ -14,6 +14,11 @@ public class CharacterCustomizationController : MonoBehaviour
 
     public List<GameObject> Players;
 
+    private void Start()
+    {
+        GenerateNewPlayers();
+    }
+
     public void GenerateNewPlayers()
     {
         print("start generate");
