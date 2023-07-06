@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,24 @@ public class CharacterCustomizationController : MonoBehaviour
     private void Start()
     {
         GenerateNewPlayers();
+
+        LoadModdedCharacterCustomizationImages("./mods/Cosmetics/Head");
+    }
+
+    public static Texture2D LoadModdedCharacterCustomizationImages(string filePath)
+    {
+
+        Texture2D tex = null;
+        byte[] fileData;
+
+        if (File.Exists(filePath))
+        {
+            List<string> AllHeadImages = new List<string>();
+            fileData = File.ReadAllBytes(filePath);
+            tex = new Texture2D(16, 16);
+            tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+        }
+        return tex;
     }
 
     public void GenerateNewPlayers()

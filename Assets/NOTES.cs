@@ -6,7 +6,6 @@ THINGS TO BE FIXED/DEVELOPED:
     - Walk
     - Run (consumes stamina over time)
     - Roll (consumes a little bit of stamina)
-    - Slide (to slide under obstacles)(consumes a little bit of stamina)
     - Swim (Consumes Oxygen)
     - Climb (consumes stamina over time)
     - Teleport (through portals maybe?)
@@ -95,5 +94,17 @@ THINGS TO BE FIXED/DEVELOPED:
     Backflip
     Frontflip (?)
     I NEED MORE IDEAS PLEAASE
+
+
+/////////////////////////////////////////////////////
+/// MODDABLES MODS OVER MODIFICATIONS OF THE GAME ///
+/////////////////////////////////////////////////////
+Things that could be moddable:
+ - Player Cosmetics
+ - UI (Display dmg done / received, modify existent UI position or smth like this)
+ - New Levels (?)
+ - Override existing textures (modify tiles)
+ - Override audio/sound/music
+
 
 */
