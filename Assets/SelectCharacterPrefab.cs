@@ -11,14 +11,32 @@ public class SelectCharacterPrefab : MonoBehaviour, IPointerEnterHandler, IPoint
     public AudioClip FavouriteCharacterSound;
     public AudioClip ConfirmCharacterSound;
 
+    [SerializeField] GameObject CharacterSelectBorders;
+    [SerializeField] GameObject FavouriteStar;
+    /*
+    void OnMouseDown()
+    {
+        Debug.Log("Selected GameObject.");
+    }
+
+    void OnMouseEnter()
+    {
+        CharacterSelectBorders.SetActive(true);
+    }
+
+    void OnMouseExit()
+    {
+        CharacterSelectBorders.SetActive(false);
+    }
+    */
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse has entered the GameObject.");
+        CharacterSelectBorders.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse is no longer on GameObject.");
+        CharacterSelectBorders.SetActive(false);
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -44,7 +44,10 @@ public class CharacterCustomizationController : MonoBehaviour
         foreach (GameObject Character in Players)
         {
             print("character name " + Character.name);
-            
+
+            // If it is favourite, do not generate
+            if (Character.transform.GetChild(6).gameObject.activeInHierarchy) continue;
+
             Character.transform.GetChild(1).transform.GetComponent<Image>().sprite = BodyImages[Random.Range(0, BodyImages.Count - 1)];
             Character.transform.GetChild(2).transform.GetComponent<Image>().sprite = PantsImages[Random.Range(0, PantsImages.Count - 1)];
             Character.transform.GetChild(3).transform.GetComponent<Image>().sprite = EyesImages[Random.Range(0, EyesImages.Count - 1)];
