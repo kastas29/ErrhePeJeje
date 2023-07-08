@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,23 +20,72 @@ public class CharacterCustomizationController : MonoBehaviour
     {
         GenerateNewPlayers();
 
-        LoadModdedCharacterCustomizationImages("./mods/Cosmetics/Head");
+        LoadModdedCharacterCustomizationImages("./mods/Cosmetics");
     }
 
-    public static Texture2D LoadModdedCharacterCustomizationImages(string filePath)
+    public void LoadModdedCharacterCustomizationImages(string folderName)
     {
+        // Get all sub directories from the given path.
+        string[] dirs = Directory.GetDirectories(folderName, "*", SearchOption.TopDirectoryOnly);
 
-        Texture2D tex = null;
-        byte[] fileData;
-
-        if (File.Exists(filePath))
+        // Using foreach because handles null. For each path, check images inside
+        foreach (string dir in dirs)
         {
-            List<string> AllHeadImages = new List<string>();
-            fileData = File.ReadAllBytes(filePath);
-            tex = new Texture2D(16, 16);
-            tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+            // Get all '.png' files inside the 'dir' directory
+            List<string> ImageNames = Directory.GetFiles(dir, "*.png", SearchOption.AllDirectories).ToList();
+
+            // If there is any file, do the loop to read them all.
+            if (ImageNames.Count != 0)
+            {
+                foreach (string ImagePath in ImageNames)
+                {
+                    Sprite sprite = LoadImageFromFile(ImagePath);
+
+                    switch (sprite.name)
+                    {
+                        case "Head":
+                            HeadDecorationsImages.Add(sprite);
+                            break;
+                        case "Body":
+                            BodyImages.Add(sprite);
+                            break;
+                        case "Eyes":
+                            EyesImages.Add(sprite);
+                            break;
+                        case "Face":
+                            FaceDecorationsImages.Add(sprite);
+                            break;
+                        case "Pants":
+                            PantsImages.Add(sprite);
+                            break;
+                        default:
+                            continue; // This is because the image has not the proper name. So go next file if this is misswritten :)
+                    }
+                }
+            }
         }
-        return tex;
+    }
+
+    public Sprite LoadImageFromFile(string imagePath)
+    {
+        // Check if the file exists
+        if (!File.Exists(imagePath))
+        {
+            Debug.LogError("File not found: " + imagePath);
+            return null;
+        }
+
+        // Load the image as a byte array
+        byte[] imageData = File.ReadAllBytes(imagePath);
+
+        // Create a new texture
+        Texture2D texture = new Texture2D(2, 2);
+        texture.LoadImage(imageData);
+
+        // Create a sprite from the texture
+        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
+
+        return sprite;
     }
 
     public void GenerateNewPlayers()
