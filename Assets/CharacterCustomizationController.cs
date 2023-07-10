@@ -20,7 +20,7 @@ public class CharacterCustomizationController : MonoBehaviour
     {
         GenerateNewPlayers();
 
-        LoadModdedCharacterCustomizationImages("./mods/Cosmetics");
+        LoadModdedCharacterCustomizationImages("./Assets/mods/Cosmetics");
     }
 
     public void LoadModdedCharacterCustomizationImages(string folderName)
