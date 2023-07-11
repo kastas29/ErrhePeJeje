@@ -13,6 +13,13 @@ public class GeneralButtonController : MonoBehaviour, IPointerUpHandler, IPointe
 
     [SerializeField] Image SpriteRenderer;
 
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         SpriteRenderer.sprite = PressedButtonSprite;
@@ -21,11 +28,13 @@ public class GeneralButtonController : MonoBehaviour, IPointerUpHandler, IPointe
     public void OnPointerEnter(PointerEventData eventData)
     {
         SpriteRenderer.sprite = HighlightedButtonSprite;
+        anim.Play("GeneralButtonPointerOver");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         SpriteRenderer.sprite = NormalButtonSprite;
+        anim.Play("GeneralButtonPointerExit");
     }
 
     public void OnPointerUp(PointerEventData eventData)

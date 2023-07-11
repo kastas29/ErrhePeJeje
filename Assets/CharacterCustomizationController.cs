@@ -18,9 +18,9 @@ public class CharacterCustomizationController : MonoBehaviour
 
     private void Start()
     {
-        GenerateNewPlayers();
+        LoadModdedCharacterCustomizationImages(".\\Assets\\mods\\Cosmetics");
 
-        LoadModdedCharacterCustomizationImages("./Assets/mods/Cosmetics");
+        GenerateNewPlayers();
     }
 
     public void LoadModdedCharacterCustomizationImages(string folderName)
@@ -41,25 +41,27 @@ public class CharacterCustomizationController : MonoBehaviour
                 {
                     Sprite sprite = LoadImageFromFile(ImagePath);
 
-                    switch (sprite.name)
+                    print("fileName: " + ImagePath + " || Sprite name:" + sprite.name);
+
+                    if (sprite.name.Contains("Head"))
                     {
-                        case "Head":
-                            HeadDecorationsImages.Add(sprite);
-                            break;
-                        case "Body":
-                            BodyImages.Add(sprite);
-                            break;
-                        case "Eyes":
-                            EyesImages.Add(sprite);
-                            break;
-                        case "Face":
-                            FaceDecorationsImages.Add(sprite);
-                            break;
-                        case "Pants":
-                            PantsImages.Add(sprite);
-                            break;
-                        default:
-                            continue; // This is because the image has not the proper name. So go next file if this is misswritten :)
+                        HeadDecorationsImages.Add(sprite);
+                    }
+                    else if (sprite.name.Contains("Body"))
+                    {
+                        BodyImages.Add(sprite);
+                    }
+                    else if (sprite.name.Contains("Eyes"))
+                    {
+                        EyesImages.Add(sprite);
+                    }
+                    else if (sprite.name.Contains("Face"))
+                    {
+                        FaceDecorationsImages.Add(sprite);
+                    }
+                    else if (sprite.name.Contains("Pants"))
+                    {
+                        PantsImages.Add(sprite);
                     }
                 }
             }
@@ -68,6 +70,8 @@ public class CharacterCustomizationController : MonoBehaviour
 
     public Sprite LoadImageFromFile(string imagePath)
     {
+        print("path: " + imagePath);
+
         // Check if the file exists
         if (!File.Exists(imagePath))
         {
@@ -79,11 +83,22 @@ public class CharacterCustomizationController : MonoBehaviour
         byte[] imageData = File.ReadAllBytes(imagePath);
 
         // Create a new texture
-        Texture2D texture = new Texture2D(2, 2);
+        Texture2D texture = new Texture2D(16, 16);
         texture.LoadImage(imageData);
+        texture.filterMode = FilterMode.Point;
+        Debug.Log("Texture dimensions: " + texture.width + "x" + texture.height);
 
         // Create a sprite from the texture
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
+
+        // Split the path, and get the last element. This will be the name of the sprite.
+        // This is done to manage which part of the body is this sprite, such as Head_Whatever, Pants_Wahtever, etc...
+        string spriteName = imagePath.Split("\\").Last();
+        spriteName.Remove(spriteName.Length - 4);
+        sprite.name = spriteName;
+        print("SPRITEEE: " + sprite.name);
+
+        print("Is sprite null?: " + sprite == null);
 
         return sprite;
     }
@@ -91,6 +106,7 @@ public class CharacterCustomizationController : MonoBehaviour
     public void GenerateNewPlayers()
     {
         print("start generate");
+        print("how many hairs there are? " + HeadDecorationsImages.Count);
         foreach (GameObject Character in Players)
         {
             print("character name " + Character.name);
@@ -98,11 +114,11 @@ public class CharacterCustomizationController : MonoBehaviour
             // If it is favourite, do not generate
             if (Character.transform.GetChild(6).gameObject.activeInHierarchy) continue;
 
-            Character.transform.GetChild(1).transform.GetComponent<Image>().sprite = BodyImages[Random.Range(0, BodyImages.Count - 1)];
-            Character.transform.GetChild(2).transform.GetComponent<Image>().sprite = PantsImages[Random.Range(0, PantsImages.Count - 1)];
-            Character.transform.GetChild(3).transform.GetComponent<Image>().sprite = EyesImages[Random.Range(0, EyesImages.Count - 1)];
-            Character.transform.GetChild(4).transform.GetComponent<Image>().sprite = HeadDecorationsImages[Random.Range(0, HeadDecorationsImages.Count - 1)];
-            Character.transform.GetChild(5).transform.GetComponent<Image>().sprite = FaceDecorationsImages[Random.Range(0, FaceDecorationsImages.Count - 1)];
+            Character.transform.GetChild(1).transform.GetComponent<Image>().sprite = BodyImages[Random.Range(0, BodyImages.Count)];
+            Character.transform.GetChild(2).transform.GetComponent<Image>().sprite = PantsImages[Random.Range(0, PantsImages.Count)];
+            Character.transform.GetChild(3).transform.GetComponent<Image>().sprite = EyesImages[Random.Range(0, EyesImages.Count)];
+            Character.transform.GetChild(4).transform.GetComponent<Image>().sprite = HeadDecorationsImages[Random.Range(0, HeadDecorationsImages.Count)];
+            Character.transform.GetChild(5).transform.GetComponent<Image>().sprite = FaceDecorationsImages[Random.Range(0, FaceDecorationsImages.Count)];
         }
         print("end generate");
     }

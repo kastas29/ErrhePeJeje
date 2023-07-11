@@ -24,12 +24,12 @@ public class Dissolve : MonoBehaviour
         }
     }
 
-    private void DissolveOut()
+    public void DissolveOut()
     {
         anim.SetTrigger("DissolveOut");
     }
 
-    private void DissolveIn()
+    public void DissolveIn()
     {
         anim.SetTrigger("DissolveIn");
     }
