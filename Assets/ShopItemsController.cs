@@ -6,7 +6,11 @@ public class ShopItemsController : MonoBehaviour
 {
     static ShopItemsController Instance;
 
-    public List<ShopItemsSO> CosmeticItemsList;
+    public List<ShopItemsSO> HeadShopItemsList;
+    public List<ShopItemsSO> FaceShopItemsList;
+    public List<ShopItemsSO> EyesShopItemsList;
+    public List<ShopItemsSO> BodyShopItemsList;
+    public List<ShopItemsSO> PantsShopItemsList;
 
     void Awake()
     {

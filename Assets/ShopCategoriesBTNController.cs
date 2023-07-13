@@ -14,6 +14,7 @@ public class ShopCategoriesBTNController : MonoBehaviour, IPointerEnterHandler, 
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        print("Exit label hover??");
         LabelToOpen.GetComponent<Animator>().Play("Disappear");
     }
 }
