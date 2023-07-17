@@ -1,6 +1,15 @@
 /*
 RPG? GAME HAS TO BE SETTED WITH A NAME AND VERSION
 
+PLACES I WANT THE GAME TO HAVE
+ - Desert
+ - Plains
+ - Flower Forest
+ - Forest
+ - Dark Forest(?)
+ - Beach
+ - Mountains
+
 THINGS TO BE FIXED/DEVELOPED:
  - GOOD MOVEMENT
     - Walk
@@ -9,6 +18,15 @@ THINGS TO BE FIXED/DEVELOPED:
     - Swim (Consumes Oxygen)
     - Climb (consumes stamina over time)
     - Teleport (through portals maybe?)
+
+SKILLS:
+    I would like to have passive skills, not combat ones. THis refers to abilities such as:
+ - Agility (not affected by slowness of sand for example)
+ - Dexterity (To pick up people pockets)
+ - Construction: The player is able to create more effective buildings such as storages or tools.
+ - LockPicking: They can access hidden areas, unlock doors, and disarm traps, granting access to valuable treasures or shortcuts.
+ - Linguistics: The character is a polyglot, skilled in multiple languages. They can communicate with various NPCs and decipher ancient texts or cryptic messages, providing valuable insights and uncovering hidden secrets.
+ - Stealth: The character is adept at moving silently and remaining undetected. They can sneak past guards, eavesdrop on conversations, and perform covert actions without alerting others.
 
  - Items
     - Simple items: These are basic items that do not have any special attributes or effects.

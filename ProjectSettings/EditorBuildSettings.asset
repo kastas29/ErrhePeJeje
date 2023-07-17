@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSlotSelector.unity
     guid: 6369976ed070c144eab03fd32fefd051
+  - enabled: 1
+    path: Assets/Scenes/CharacterStoryMaker.unity
+    guid: 170af5dd6210af9459eb3ee08bbf526d
   m_configObjects: {}

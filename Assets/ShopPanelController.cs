@@ -1,67 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopPanelController : MonoBehaviour
 {
-    [SerializeField] GameObject Cat_HeadPanel;
-    [SerializeField] GameObject Cat_FacePanel;
-    [SerializeField] GameObject Cat_EyesPanel;
-    [SerializeField] GameObject Cat_BodyPanel;
-    [SerializeField] GameObject Cat_PantsPanel;
+    [SerializeField] GameObject ShopItemPrefab;
 
+    [SerializeField] GameObject ShopItemsPanel;
 
+    [Header("Items Lists")]
+    public List<ShopItemsSO> HeadShopItemsList;
+    public List<ShopItemsSO> FaceShopItemsList;
+    public List<ShopItemsSO> EyesShopItemsList;
+    public List<ShopItemsSO> BodyShopItemsList;
+    public List<ShopItemsSO> PantsShopItemsList;
+
+    public enum Category { HEAD, FACE, EYES, BODY, PANTS }
 
     private void OnEnable()
     {
         GetComponent<Animator>().Play("OpenShopPanel");
     }
 
-    public void OpenHeadCategoryPanel()
+    public void ListItemsByCategory(int CategoryToOpen)
     {
-        Cat_HeadPanel.SetActive(true);
-        Cat_FacePanel.SetActive(false);
-        Cat_EyesPanel.SetActive(false);
-        Cat_BodyPanel.SetActive(false);
-        Cat_PantsPanel.SetActive(false);
-    }
+        // Remove alll childs
+        foreach (Transform go in ShopItemsPanel.transform)
+        {
+            Destroy(go.gameObject);
+        }
 
-    public void OpenFaceCategoryPanel()
-    {
-        Cat_HeadPanel.SetActive(false);
-        Cat_FacePanel.SetActive(true);
-        Cat_EyesPanel.SetActive(false);
-        Cat_BodyPanel.SetActive(false);
-        Cat_PantsPanel.SetActive(false);
-    }
+        List<ShopItemsSO> tempList = new List<ShopItemsSO>();
+        switch (CategoryToOpen)
+        {
+            case 1:
+                tempList = HeadShopItemsList;
+                break;
+            case 2:
+                tempList = FaceShopItemsList;
+                break;
+            case 3:
+                tempList = EyesShopItemsList;
+                break;
+            case 4:
+                tempList = BodyShopItemsList;
+                break;
+            case 5:
+                tempList = PantsShopItemsList;
+                break;
+        }
 
-    public void OpenEyesCategoryPanel()
-    {
-        Cat_HeadPanel.SetActive(false);
-        Cat_FacePanel.SetActive(false);
-        Cat_EyesPanel.SetActive(true);
-        Cat_BodyPanel.SetActive(false);
-        Cat_PantsPanel.SetActive(false);
-    }
+        foreach (ShopItemsSO item in tempList)
+        {
+            GameObject newItem = Instantiate(ShopItemPrefab, ShopItemsPanel.transform);
 
-    public void OpenBodyCategoryPanel()
-    {
-        Cat_HeadPanel.SetActive(false);
-        Cat_FacePanel.SetActive(false);
-        Cat_EyesPanel.SetActive(false);
-        Cat_BodyPanel.SetActive(true);
-        Cat_PantsPanel.SetActive(false);
-    }
+            newItem.gameObject.transform.GetChild(2).GetComponent<Image>().sprite = item.ItemIcon;
 
-    public void OpenPantsCategoryPanel()
-    {
-        Cat_HeadPanel.SetActive(false);
-        Cat_FacePanel.SetActive(false);
-        Cat_EyesPanel.SetActive(false);
-        Cat_BodyPanel.SetActive(false);
-        Cat_PantsPanel.SetActive(true);
-    }
+            // Check if the item is already unlocked, and hide or remove the 'lock' stuff
+            if (item.IsUnlocked)
+            {
+                newItem.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+                newItem.gameObject.transform.GetChild(4).gameObject.SetActive(false);
+            }
 
+        }
+    }
 
     public void CloseShopPanel()
     {

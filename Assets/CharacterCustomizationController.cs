@@ -16,6 +16,27 @@ public class CharacterCustomizationController : MonoBehaviour
 
     public List<GameObject> Players;
 
+    public GameObject PlayerObject;
+    public GameObject LastCharacterSelected;
+
+    public CharacterVisualsSO CharacterVisuals;
+
+    public static CharacterCustomizationController Instance;
+
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         LoadModdedCharacterCustomizationImages(".\\Assets\\mods\\Cosmetics");
@@ -121,5 +142,23 @@ public class CharacterCustomizationController : MonoBehaviour
             Character.transform.GetChild(5).transform.GetComponent<Image>().sprite = FaceDecorationsImages[Random.Range(0, FaceDecorationsImages.Count)];
         }
         print("end generate");
+    }
+
+    public void ToggleCharacterFavourite()
+    {
+        if (PlayerObject.transform.GetChild(6).gameObject.activeInHierarchy)
+        {
+            PlayerObject.transform.GetChild(6).gameObject.SetActive(false);
+        } else
+        {
+            PlayerObject.transform.GetChild(6).gameObject.SetActive(true);
+        }
+    }
+
+    public void StartGame()
+    {
+        CharacterVisuals.CharacterObject = PlayerObject;
+
+        SceneController.Instance.ChangeScene("CharacterStoryMaker");
     }
 }
