@@ -344,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151041383}
   - component: {fileID: 151041382}
+  - component: {fileID: 151041384}
   m_Layer: 0
   m_Name: CharacterStoryMakerController
   m_TagString: Untagged
@@ -380,6 +381,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151041384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151041381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48503f5fe97b01a4cae4371c00e8c22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stories:
+  - StoryIcon: {fileID: 0}
+    StoryName: 
+    StoryDescription: 
+    IsSelected: 0
+  - StoryIcon: {fileID: 0}
+    StoryName: The Enchanted Grove
+    StoryDescription: You have been raised by animals, by the nature, surrounded
+      with jungles and trees. You do not know anything but speedy hunting...
+    IsSelected: 0
+  - StoryIcon: {fileID: 0}
+    StoryName: The Celestial Haven
+    StoryDescription: 
+    IsSelected: 0
 --- !u!1 &304468084
 GameObject:
   m_ObjectHideFlags: 0
