@@ -125,4 +125,77 @@ Things that could be moddable:
  - Override audio/sound/music
 
 
+//////////////////
+///   STORY    ///
+//////////////////
+
+Title: "The Enchanted Cafe Catastrophe"
+In a half-fantasy, half-real world, there exists a bustling town named "Harmonyville,"
+where mystical beings and ordinary humans coexist peacefully. Amidst the cobbled streets
+and quaint shops, lies a hidden gem: "The Enchanted Cafe." This whimsical cafe is renowned
+or serving the most extraordinary and magical drinks and dishes, delighting all who visit.
+However, one fateful morning, an accidental collision of two ancient artifacts occurred
+inside the cafe's kitchen – a magical hourglass and a mysterious jar of rare spices.
+The resulting explosion of magical energy sent a shockwave throughout Harmonyville,
+infusing the town's everyday items with enchantment and creating bizarre combinations.
+Ordinary utensils sprouted wings, brooms gained the ability to teleport, and candles
+developed the power to speak.
+The townspeople are bewildered, and chaos ensues as the enchanted items create a series
+of absurd problems. Customers at the cafe are being served floating teacups, sneezing
+pastries, and color-changing ice creams. Moreover, the enchanted items have escaped the cafe,
+spreading their antics throughout the town.
+The main problem: The enchanted chaos must be resolved before it spreads beyond Harmonyville
+and becomes irreversible. If left unchecked, the enchanted items could jeopardize the delicate
+balance between fantasy and reality, leading to even stranger and potentially dangerous consequences.
+The solution: A group of unlikely heroes, comprising a curious street urchin, a reclusive potion master,
+a clumsy talking candlestick, and an adventurous baker with a magical rolling pin, set out on a quest
+to retrieve the hourglass and the spice jar. Their mission is to reverse the accidental collision and
+bring everything back to normal.
+Throughout their journey, the heroes must face comical challenges and puzzles, utilizing the
+enchanted items' peculiar powers to overcome obstacles. For instance, they might use the talking
+candlestick to negotiate with enchanted brooms guarding the artifacts or concoct potions with the
+help of the flying teacups.
+The game unfolds as an RPG with humorous dialogue, quirky characters, and unexpected twists,
+showcasing the players' ability to think creatively to solve problems. Instead of the typical
+"save the world" scenario, the players' goal is to restore harmony to their whimsical town and
+reverse the absurd enchantments while navigating through an amusing and unpredictable adventure.
+
+///
+/// NPCS AND LITTLE TOWN FEATURES
+/// 
+Quest NPCs:
+Archibald Quibblepuff: An eccentric wizard who accidentally caused the artifact collision. He provides valuable clues and advice to the heroes, but his quirky nature often leads to more confusion.
+Gertrude Whimsybrook: The head chef of the Enchanted Cafe. She feels guilty for the chaos caused and seeks help in gathering the ingredients needed to concoct a potion that can reverse the enchantments.
+Mortimer Snickersnack: The mischievous talking candlestick who escaped the cafe. He holds vital information about the artifacts and their whereabouts but enjoys playing tricks on the heroes.
+Gwendolyn Goldenfluff: A kind-hearted fairy who offers assistance with deciphering clues and navigating through the mystical forest where the artifacts are hidden.
+Captain Blunderbeard: The valiant but somewhat clueless leader of the town guard. He assigns the heroes to various tasks but often confuses the severity of the enchanted situations.
+Madame Esmeralda: A fortune-telling cat with a penchant for speaking in riddles. She aids the heroes by offering cryptic hints about the artifacts' locations.
+Professor Ignatius Puddlefidget: A brilliant but absent-minded scholar who specializes in magical artifacts. He provides research materials to help the heroes understand the consequences of the collision.
+Marigold Buttercup: The town's chief gardener who needs help rescuing her enchanted plants, which have started singing loudly at midnight and causing sleepless nights for the villagers.
+Wilbur Wafflefoot: A shy young baker who accidentally enchanted his bakery's bread, resulting in loaves that have grown legs and run away. He seeks assistance in catching them.
+Lady Penelope Whifflebottom: An elegant aristocrat who needs help recovering her prized collection of enchanted jewelry that has scattered across the town.
+Vendor-type NPCs:
+Fizzlepop Twigglespark: A goblin merchant selling an assortment of peculiar magical trinkets, like hats that turn into squirrels and self-dancing shoes.
+Bumbleberry Bumblebee: A quirky beekeeper selling jars of enchanted honey that makes food levitate for a few seconds when drizzled on top.
+Grizzletoe Ironforge: A grumpy dwarf blacksmith selling talking swords and flying hammers, albeit they argue with potential buyers over their worth.
+Delilah Spellbinder: A mystical artist selling enchanted paintings that come to life, depicting humorous scenes of mythical creatures engaging in everyday tasks.
+Tinker McSparkles: An enthusiastic tinkerer selling mechanical pet rocks that do nothing but wiggle their eyebrows and occasionally sneeze.
+Wanda Wobblesprocket: A fortune-teller with a twist, selling magic eight balls that answer questions with puns and riddles instead of clear answers.
+Percival Puddingbottom: A jovial confectioner selling enchanted sweets that change flavors with every bite, leaving customers guessing what they're eating.
+Petunia Fluffernutter: A cuddly stuffed animal vendor who swears that her plushies have a secret society at night but can never provide proof.
+Oliver Oglethorpe: A fisherman selling fish that sing sea shanties while being cooked.
+Horace Hootenanny: A bard selling enchanted musical instruments that play random tunes, causing quite the cacophony.
+Amusing Village Features:
+The Talking Fountain: A majestic fountain in the town square that shares cheesy jokes and riddles with passersby.
+The Everchanging Rainbow Bridge: A magical bridge that changes colors based on the mood of the last person who crossed it.
+The Upside-Down House: A house where the rooms are upside down, and furniture is fixed to the ceiling, making for a hilarious navigation experience.
+The Ticklish Tree: A tree that giggles uncontrollably when someone tries to climb it.
+The Quacking Garden: A garden where all the plants make various animal noises, giving it a lively and amusing atmosphere.
+The Peculiar Weather Vane: A weather vane on top of the town hall that spins wildly without any regard for the actual wind direction.
+The Mirror Maze: A maze of mirrors that distorts reflections, leaving visitors hilariously bewildered.
+The Endless Staircase: A seemingly normal staircase that never ends, leading to a humorous exercise in futility.
+The Invisible Pet Park: A park where townspeople come to "walk" their invisible pets and engage in friendly imaginary pet competitions.
+The Fortune Cookie Cart: A cart that sells fortune cookies with absurd and nonsensical fortunes that never seem to come true.
+
+
 */
