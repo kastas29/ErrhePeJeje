@@ -198,4 +198,22 @@ The Invisible Pet Park: A park where townspeople come to "walk" their invisible 
 The Fortune Cookie Cart: A cart that sells fortune cookies with absurd and nonsensical fortunes that never seem to come true.
 
 
+///
+/// MAIN CITIES
+///
+Glimmerbrook: A mystical village hidden within an ancient forest, home to fairies, sprites,
+and talking animals. Glimmerbrook is famous for its luminescent fireflies that illuminate the
+village at night.
+Misty Harbor: A coastal city with colorful houses built on stilts, known for its friendly
+merfolk inhabitants. The locals love to host underwater music festivals, and visitors can
+enjoy magical boat rides on floating water lilies.
+Emberpeak: A mountainous town located at the foot of an active volcano. Emberpeak is home
+to skilled blacksmiths who craft enchanted weaponry and armor.
+Starfall Sanctuary: A serene village situated in the celestial valley, where the night sky
+twinkles with an array of magical constellations. It's said that wishes made here have a
+higher chance of coming true.
+Whimsy Wallow: A peculiar village hidden inside a giant mushroom forest. The villagers are
+known for their love of mushroom-themed festivities and whimsical hats.
+
+
 */
