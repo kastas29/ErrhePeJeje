@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         PlayerSprite.GetComponent<SpriteRenderer>().sprite = characterStats.sprite;
-        transform.position = playerPosition.Position;
+        // wtf is this transform.position = playerPosition.Position;
     }
 
     public void Move(InputAction.CallbackContext context)

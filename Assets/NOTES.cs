@@ -135,7 +135,7 @@ where mystical beings and ordinary humans coexist peacefully. Amidst the cobbled
 and quaint shops, lies a hidden gem: "The Enchanted Cafe." This whimsical cafe is renowned
 or serving the most extraordinary and magical drinks and dishes, delighting all who visit.
 However, one fateful morning, an accidental collision of two ancient artifacts occurred
-inside the cafe's kitchen – a magical hourglass and a mysterious jar of rare spices.
+inside the cafe's kitchen ï¿½ a magical hourglass and a mysterious jar of rare spices.
 The resulting explosion of magical energy sent a shockwave throughout Harmonyville,
 infusing the town's everyday items with enchantment and creating bizarre combinations.
 Ordinary utensils sprouted wings, brooms gained the ability to teleport, and candles
@@ -204,16 +204,46 @@ The Fortune Cookie Cart: A cart that sells fortune cookies with absurd and nonse
 Glimmerbrook: A mystical village hidden within an ancient forest, home to fairies, sprites,
 and talking animals. Glimmerbrook is famous for its luminescent fireflies that illuminate the
 village at night.
+
 Misty Harbor: A coastal city with colorful houses built on stilts, known for its friendly
 merfolk inhabitants. The locals love to host underwater music festivals, and visitors can
 enjoy magical boat rides on floating water lilies.
+
 Emberpeak: A mountainous town located at the foot of an active volcano. Emberpeak is home
 to skilled blacksmiths who craft enchanted weaponry and armor.
+
 Starfall Sanctuary: A serene village situated in the celestial valley, where the night sky
 twinkles with an array of magical constellations. It's said that wishes made here have a
 higher chance of coming true.
+
 Whimsy Wallow: A peculiar village hidden inside a giant mushroom forest. The villagers are
 known for their love of mushroom-themed festivities and whimsical hats.
 
+
+/// 
+/// INTERACTIONS
+///
+- May create an PushableObject which derives from Interactable. This could be used to create some puzzles or some curious interactions
+- Crates and chests just gives loot
+- Every NPC must be interactable and the player can talk or do different actions with them
+- The player can pet dogs and cats. Petting black cats puts an "Unlucky" effect to the player for a few minutes which reduces the loot obtained or something like that.
+- All mushrooms and grass maybe or wheat or plants, etc, will move when the player steps on them
+- Think about some animal or creature that can steal items from the player.
+- create some objects that when interact with them, they talk and say some random shitty sentence idk
+- Openable wardrobes and any kind of furniture. The player can loot absolutely anything
+- Create a mirror which the player can talk to to ask questions.
+- Give at some point a pet to the player. The pet will be completely useless, but will comment every now and then some random sentence
+- Create NPCs that speaks in some random language, but this language has to make sense. Maybe they sing as well
+- Be able to do a "great variety" of actions with any NPC like "Talk, Tell a joke, kiss, threaten them, etc"
+- Random potions that may change or apply camera effects like monochrome or distorsion like drunk.
+- Add alcoholic drinks.
+- Make something that can talk (NPCs, animals or plants) extremely sarcastic
+- The player can crouoch and try to pet squirrels or catch butterflies, etc
+- Put somewhere a piano that can be actually played
+- Introduce characters who speak in funny dialects or have comically exaggerated accents, leading to hilarious misunderstandings and language-related puzzles.
+- Every now and then NPCs in the night could handle a drinking party soy they are drunk, and they shout and tell funny random things.
+- Incorporate a humorous social media platform within the game, where the player can read funny posts, engage in virtual arguments, or encounter bizarre online challenges.
+
+- Glowy sneakers. if the player equips these boots the walking animation will be moon walk
 
 */
